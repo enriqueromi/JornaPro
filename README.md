@@ -1,4 +1,4 @@
-# ManagemDayPro
+# JornaPro
 Proyecto realizado para entrega como **CFGS** del modulo Desarrollo de aplicaciones multiplataforma en el centro FESAC.
 Este proyecto se trata de una pagina web para llevar jornadas de trabajadores.
 
@@ -14,13 +14,6 @@ Run `ng serve` para correr la pagina. Navega a `http://localhost:4200/`. La apli
 
 Run `ng generate component component-name` para generar un nuevo componente.Tambien puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Ayuda adicional
 
