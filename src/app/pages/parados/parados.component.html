@@ -1,0 +1,49 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarTrabajador(input.value)" type="text" class="form-control" placeholder="Buscar usuario...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- <h3 class="card-title">Trabajadores registrado( <small>{{_trabajadoresService.totalTrabajadores}}</small>)</h3> -->
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Trabajador</th>
+                            <th>Grupo</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let trabajador of trabajadores">
+                            <td>
+                                <img [src]="trabajador.img | imagen: 'trabajadores'" class="img-50 img-circle pointer">
+                            </td>
+                            <td>
+                                {{trabajador.nombre}}
+                            </td>
+                            <td>
+                                {{trabajador.grupo.nombre}}
+                            </td>
+                            <td style="color: darkorange">
+                                <strong>Parado</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

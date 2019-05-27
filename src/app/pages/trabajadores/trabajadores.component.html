@@ -1,0 +1,68 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarTrabajador(input.value)" type="text" class="form-control" placeholder="Buscar usuario...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-right">
+                    <button [routerLink]="['/trabajador','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                        <i class="fa fa-plus"></i>   
+                        Crear Trabajador
+                </button>
+                </div>
+
+                <h3 class="card-title">Trabajadores registrado( <small>{{_trabajadoresService.totalTrabajadores}}</small>)</h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Trabajador</th>
+                            <th>Grupo</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let trabajador of trabajadores">
+                            <td>
+                                <img [src]="trabajador.img | imagen: 'trabajadores'" class="img-50 img-circle pointer">
+                            </td>
+                            <td>
+                                {{trabajador.nombre}}
+                            </td>
+                            <td>
+                                {{trabajador.grupo.nombre}}
+                            </td>
+                            <td>
+                                <button (click)="cambiarEstado( trabajador )" *ngIf="!trabajador.estado" class="btn btn-primary"> Trabajar</button>
+                                <button (click)="cambiarEstado( trabajador )" *ngIf="trabajador.estado" class="btn btn-warning"> Parar</button>
+                            </td>
+                            <td>
+                                <button [routerLink]="['/trabajador',trabajador._id]" routerLinkActive="router-link-active" class="btn btn-primary" style="margin: 3px">
+                                <i class="fa fa-edit"></i>
+                              </button>
+
+                                <button (click)="borrarTrabajador(trabajador)" class="btn btn-danger" style="margin: 3px">
+                                  <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

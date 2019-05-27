@@ -1,0 +1,32 @@
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <div>
+
+                        <h4 class="card-title" *ngIf="grafica1"> {{grafica1?.grafico1?.leyenda}}</h4>
+
+                        <app-grafico-dona *ngIf="grafica1" [chartLabels]="grafica1?.grafico1?.labels" [chartData]="grafica1?.grafico1?.data" chartType="doughnut" [chartColors]="grafica1?.grafico1?.colors">
+                        </app-grafico-dona>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <div>
+                        <h4 class="card-title" *ngIf="cargar"> Grupos</h4>
+                        <app-grafico-dona *ngIf="cargar" [chartLabels]="grafica2?.grafico2?.labels" [chartData]="grafica2?.grafico2?.data" chartType="doughnut" [chartColors]="grafica2?.grafico2?.colors">
+                        </app-grafico-dona>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>

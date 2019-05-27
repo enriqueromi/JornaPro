@@ -1,0 +1,53 @@
+<div class="col-xs-12 col-sm-12">
+    <p class="pull-right visible-xs">
+
+
+
+    </p>
+
+    <div class="jumbotron" style=" height: 500px; color: black ; background: url('https://webcdn.agroptima.com/wp-content/uploads/2017/02/30151545/home-1-1.jpg') no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;">
+        <br>
+        <br>
+        <h1 style=" color: rgb(58, 55, 55)"> <strong> Bienvanido, {{usuario.nombre}} !!</strong> </h1>
+        <p> <strong> Ya puedes empezar a trabajar con nustra pagina, A TRABAJAR !!!</strong></p>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-lg-4">
+            <h2>Graficas</h2>
+            <p>En este apartado dispondras de una serie de Graficas para echar un vistazo de forma rapida como esta distribuido tus trabajadores </p>
+            <p><a class="btn btn-default" [routerLink]="['/grafica1']" role="button">Navegar »</a></p>
+        </div>
+        <!--/.col-xs-6.col-lg-4-->
+        <div class="col-xs-6 col-lg-4">
+            <h2>Trabajando</h2>
+            <p>Con esta opcion podras ver un listado de los trabajadores que estan acutalmente trabjando </p>
+            <p><a class="btn btn-default" [routerLink]="['/trabajando']" role="button">Navegar »</a></p>
+        </div>
+        <!--/.col-xs-6.col-lg-4-->
+        <div class="col-xs-6 col-lg-4">
+            <h2>Parados</h2>
+            <p>Con esta opcion podras ver un listado de los trabajadores que estan acutalmente parados </p>
+            <p><a class="btn btn-default" [routerLink]="['/parados']" role="button">Navegar »</a></p>
+        </div>
+        <!--/.col-xs-6.col-lg-4-->
+        <div class="col-xs-6 col-lg-4">
+            <h2>Usuario</h2>
+            <p>Esta opcion nos dara la posibilidad de controlar los usuarios registrados y poder modificarles los roles de acceso </p>
+            <p><a class="btn btn-default" [routerLink]="['/usuarios']" role="button">Navegar »</a></p>
+        </div>
+        <!--/.col-xs-6.col-lg-4-->
+        <div class="col-xs-6 col-lg-4">
+            <h2>Grupos</h2>
+            <p>Crea, modifica y elimina tus propios grupos de trabajos y personaliza los </p>
+            <p><a class="btn btn-default" [routerLink]="['/grupo']" role="button">Navegar »</a></p>
+        </div>
+        <!--/.col-xs-6.col-lg-4-->
+        <div class="col-xs-6 col-lg-4">
+            <h2>trabajadores</h2>
+            <p>Crea, modifica , elimina y mas opciones de todos tus trabajadores. Y agrupalos para tenerlos mas ordenados. </p>
+            <p><a class="btn btn-default" [routerLink]="['/trabajadores']" role="button">Navegar »</a></p>
+        </div>
+        <!--/.col-xs-6.col-lg-4-->
+    </div>
+    <!--/row-->
+</div>

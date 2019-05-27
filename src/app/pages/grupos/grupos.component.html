@@ -1,0 +1,79 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarGrupo(input.value)" type="text" class="form-control" placeholder="Buscar usuario...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row animated fadeIn" *ngIf="cargando">
+
+    <div class="col-sm-12">
+
+        <div class="alert alert-warning text-center">
+            <strong>Cargando</strong>
+            <br>
+            <i class="fa fa-refresh fa-spin fa-2x"></i>
+            <br>
+            <span>Espere por favor</span>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="row animated fadeIn" *ngIf="!cargando">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-right">
+                    <button (click)="crearGrupo()" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                            <i class="fa fa-plus"></i>   
+                            Crear Grupo
+                    </button>
+                </div>
+
+                <h3 class="card-title">Grupos Registrados( <small>{{grupos.length}}</small> )</h3>
+
+
+                <table class="table table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Grupo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let grupo of grupos">
+                            <td class="w70"> <img (click)="actualizarImagen(grupo)" [src]="grupo.img | imagen: 'grupo'" class="img-50 img-circle pointer"></td>
+                            <td>
+                                <input [(ngModel)]="grupo.nombre" type="text" class="form-control" placeholder="Nombre del grupo" name="nombre">
+                            </td>
+                            <td>
+                                <button (click)="guardarGrupo(grupo)" class="btn btn-primary" style="margin: 3px">
+                                <i class="fa fa-save"></i>
+                              </button>
+
+                                <button (click)="borrarGrupo(grupo)" class="btn btn-danger" style="margin: 3px">
+                                  <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+                <!-- <button class="btn btn-secondary" style="margin: 2px">Anteriores</button>
+                <button class="btn btn-secondary" style="margin: 2px">Seguiente</button> -->
+
+            </div>
+        </div>
+    </div>
+</div>
