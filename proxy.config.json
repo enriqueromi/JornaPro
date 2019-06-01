@@ -1,0 +1,7 @@
+{
+    "/comprobantes-electronicos-ws/*": {
+        "target": "https://jornaprocli.herokuapp.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
