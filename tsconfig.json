@@ -2,8 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    // "outDir": "./dist/out-tsc",
-    "outDir": "./dist/admipro",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "module": "es2015",
