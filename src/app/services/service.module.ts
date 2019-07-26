@@ -13,7 +13,7 @@ import { ModalUploadService } from '../components/modal-upload/modal-upload.serv
     HttpClientModule
   ],
   providers: [
-    SettingsService, 
+    SettingsService,
     SidebarService,
     SharedService,
     UsuarioService,
